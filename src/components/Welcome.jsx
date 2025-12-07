@@ -1,4 +1,10 @@
 import React, { useRef } from 'react'
+import gsap from 'gsap'
+
+const FONT_WEIGHTS = {
+    Subtitle: {min: 100, max: 400, default: 100},
+    Title: {min: 400, max: 900, default: 400},
+}
 
 const renderText = (text, className, baseWeight = 400) => {
     return [...text].map((char, i) => (
@@ -10,6 +16,22 @@ const renderText = (text, className, baseWeight = 400) => {
             {char === " " ? '\u00A0' : char}
         </span>
     ))
+}
+
+const setupTextHover = (container, type) => {
+    if (!container) return;
+
+    const letters = container.querySelectorAll('span');
+    const {min, max, default: base} = FONT_WEIGHTS[type];
+
+    const animateLetter = (letter, weight, duration = 0.25) => {
+        return gsap.to(letter, {duration, ease: 'power2.out', fontVariationSettings: `"whgt" ${weight}`});
+    }
+
+    const handleMouseMove = (e) => {
+        const {left} = container.getBoundingClientRect();
+        const mouseX = e.clientX - left;
+    }
 }
 
 const Welcome = () => {
