@@ -9,6 +9,7 @@ import Safari from '#windows/Safari'
 import Resume from '#windows/Resume'
 import Finder from '#windows/Finder'
 import Text from '#windows/Text'
+import Contact from '#windows/Contact'
 gsap.registerPlugin(Draggable);
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       <Resume />
       <Finder />
       <Text />
+      <Contact />
     </main>
   )
 }
