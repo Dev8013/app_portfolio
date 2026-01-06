@@ -146,7 +146,7 @@ const socials = [
     text: "Twitter/X",
     icon: "/icons/twitter.svg",
     bg: "#ff866b",
-    link: "",
+    link: "https://x.com/DevBhardwazZ",
   },
   {
     id: 4,
