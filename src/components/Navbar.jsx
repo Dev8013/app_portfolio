@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav>
         <div>
-            <img src="/images/logo.svg" alt='logo'/>
+            <img className='' src="/images/logo.svg" alt='logo'/>
             <p className='font-bold'>Dev's Portfolio</p>
             <ul>
                 {
